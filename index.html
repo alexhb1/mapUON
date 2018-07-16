@@ -13,26 +13,36 @@
     gtag('config', 'UA-106544095-1');
   </script>
       <link rel="prefetch" as="image" href="coordinategrid.png">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:700,800,900&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:700" rel="stylesheet">
   
   </head>
   <body>
 
   <div id="divHeading">
-      <a id="link" style="text-decoration:none;" href="https://www.nationstates.net/region=the_universal_order_of_nations"><img id="flag" src="Flag.png" style="vertical-align: middle; width: 7%;"/>
-      <span id="regionheading">THE UNIVERSAL ORDER OF NATIONS</span></a>
-      <button style="font-weight: 900;" id="spaceButton" class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'SpaceTab');document.body.style.backgroundColor = '#484848';">SPACE</button>
-      <button style="font-weight: 900" class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'EarthTab');document.body.style.backgroundColor = '#014197';" id="defaultOpen" id="earthButton">EARTH</button>
-      <button style="font-weight: 900" class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'InfoTab');document.body.style.backgroundColor = '#f5f5f5';" id="info">INFO</button>
+      <button style="font-weight: 700;" id="spaceButton" id="defaultOpen" class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'SpaceTab');document.body.style.backgroundColor = '#484848';">MAP</button>
+      <button style="font-weight: 700;" class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'InfoTab');document.body.style.backgroundColor = '#f5f5f5';" id="info">REQUESTS</button>
+            <button id="regionheading" style="font-weight: 700;" class="buttons buttonBehaviour" >THE GALACTIC FEDERACY</button>
+
   </div>
 
-  <div id="mobileFlagDiv" align="center" style="background-color:#1c1b1b;"><img id="mobileFlag" src="Flag.png" style="width:15%;"></div>
-  <div id="mobileHeadingDiv" align="center">THE UNIVERSAL ORDER OF NATIONS</div>
+  <div id="mobileFlagDiv" align="center" style="background-color:#f5f5f5;"><img id="mobileFlag" src="Flag.png" style="width:15%;"></div>
+  <div id="mobileHeadingDiv" align="center">THE GALACTIC FEDERACY</div>
   <div id="mobileButtonDiv" align="center">
-  <button id="MobileEarth" class="tablinks mobileButtons buttonBehaviour" onclick="openMap(event, 'EarthTab');document.body.style.backgroundColor = '#014197';">EARTH</button><button id="MobileSpace" class="tablinks mobileButtons buttonBehaviour" onclick="openMap(event, 'SpaceTab');document.body.style.backgroundColor = '#484848';">SPACE</button><button id="MobileInfo" class="tablinks mobileButtons buttonBehaviour" onclick="openMap(event, 'InfoTab');document.body.style.backgroundColor = '#f5f5f5';">INFO</button>
+  <button id="MobileEarth" class="tablinks mobileButtons buttonBehaviour" onclick="openMap(event, 'EarthTab');document.body.style.backgroundColor = '#014197';">EARTH</button><button id="MobileSpace" class="tablinks mobileButtons buttonBehaviour" onclick="openMap(event, 'SpaceTab');document.body.style.backgroundColor = '#484848';">MAP</button><button id="MobileInfo" class="tablinks mobileButtons buttonBehaviour" onclick="openMap(event, 'InfoTab');document.body.style.backgroundColor = '#f5f5f5';">REQUESTS</button>
   </div>
 
 <style>
+
+ #regionheading {
+      font-weight: 900;
+      vertical-align: middle;
+      background-color: #f5f5f5;
+      float: left;
+      font-size: 30px;
+      color: #f5f5f5;
+      
+    }
 .mobileButtons {
       display:inline;
       background-color: #000000;
@@ -52,11 +62,9 @@
   background-color:#1c1b1b;
   padding-bottom: 10px;
 }
-#mobileEarth {
-background-color:#
-}
+
 #mobileSpace {
-background-color:#000000;
+background-color:#808080;
 }
 #mobileHeadingDiv { 
   width: 100%;
@@ -74,80 +82,6 @@ background-color:#000000;
   text-align: center;
 }
 </style>
-  
-  <div id="EarthTab" class="tabcontent">
-    <div id="earth">
-      <img id="earthmap" src="EarthMap.png" style="width: 100%;">
-    </div>
-    <div id="earthlegend" style="overflow-x:auto;">
-
-  <div id="table">
-   <div class="newHeadings">
-      <h2 class="headings">AFRICA</h2>
-      <ul class="list">
-              <li><div class="box PGF"></div>PINO GRAND FENWICK</li>
-              <li><div class="box ginger"></div>GINGERLANDZ</li>
-              <li><div class="box artite_earth"></div>ARTITE</li>
-              <li><div class="box soviet"></div>RTSSR</li>
-              <li><div class="box stek"></div>STEKARUS</li>
-      </ul>
-   </div>
-   <div class="newHeadings">
-      <h2 class="headings">ASIA</h2>
-      <ul class="list">
-              <li><div class="box ash"></div>THE UNITED LANDS OF ASH</li>
-              <li><div class="box PGF"></div>PINO GRAND FENWICK</li>
-              <li><div class="box RDA"></div>REPUBLIC DEFENCE ARMY</li>
-              <li><div class="box UPR"></div>UNITED PROVINCES OF REPUBLICA</li>
-              <li><div class="box dokistan"></div>GREATER DOKISTAN</li>
-      </ul>
-   </div>
-   <div class="newHeadings">
-      <h2 class="headings">OCEANIA</h2>
-      <ul class="list">
-              <li><div class="box suburbia"></div>WEST SUBURBIA</li>
-              <li><div class="box morakaya"></div>MORAKAYA</li>
-      </ul>
-   </div>
-   <div class="newHeadings">
-      <h2 class="headings">EUROPE</h2>
-      <ul class="list">
-              <li><div class="box tribes"></div>THE TRIBAL COMMONWEALTH</li>
-              <li><div class="box PGF"></div>PINO GRAND FENWICK</li>
-              <li><div class="box stek"></div>STEKARUS</li>
-              <li><div class="box teut"></div>TEUTIONIA</li>
-              <li><div class="box soviet"></div>RTSSR</li>
-              <li><div class="box newMant"></div>WATCH THIS SPACE</li>
-              <li><div class="box iaf"></div>IAF</li>
-      </ul>
-   </div>
-   <div class="newHeadings">
-      <h2 class="headings">N. AMERICA</h2>
-      <ul class="list">
-              <li><div class="box cccp"></div>CCCP</li>
-              <li><div class="box fci"></div>CONFEDERATE IMPERIUM</li>
-              <li><div class="box RDA"></div>REPUBLIC DEFENCE ARMY</li>
-              <li><div class="box sanfran"></div>SAN FRANCISCO</li>
-              <li><div class="box suburbia"></div>WEST SUBURBIA</li>
-              <li><div class="box NRS"></div>NEW DESERET REALMS</li>
-              <li><div class="box wyoming"></div>WYOMING PEOPLE'S FRONT</li>
-      </ul>
-   </div>
-   <div class="newHeadings">
-      <h2 class="headings">S. AMERICA</h2>
-      <ul class="list">
-              <li><div class="box cccp"></div>CCCP</li>
-              <li><div class="box argo"></div>MANTENO ARGONIA</li>
-              <li><div class="box mant"></div>MANTENOS</li>
-              <li><div class="box ugr"></div>THE GREATER REPUBLICS</li>
-      </ul>
-   </div>
-</div>
-      <div id="spaceDate" class="legendcontent" style="font-weight:">
-        <p>Updated 5th July 2018</p>
-      </div>
-    </div>
-  </div>
 
 <style>
 .list {
@@ -194,15 +128,11 @@ background-color:#000000;
     }
 }
 #regionheading {
-  vertical-align: middle; 
-  padding-left: 1cm; 
-  color: #f5f5f5; 
   font-size: 35px; 
-  color:#ffffff;
-  background-color:;
-  text-decoration: none;
-  background-color:#1c1b1b;
+  color:#000000;
   font-weight: 900;
+  font-family: Rubik; 
+  font-weight: 700;
 }
 
 @media only screen and (min-width: 601px) {
@@ -227,7 +157,6 @@ background-color:#000000;
     }
     #regionheading {
       font-size:20px;
-      padding-bottom:5%;
       text-align: middle;
       margin:none;
       display: inline;
@@ -270,6 +199,7 @@ background-color:#000000;
       margin-bottom:20px;
     }
 
+
 }
 /* Styles */
 }
@@ -309,47 +239,135 @@ background-color:#000000;
   <div id="table">
      <div class="newHeadings">
         <ul class="list">
-                <li><div class="box artite"></div>ARTITE</li>
-                <li><div class="box space-cccp"></div>CCCP</li>
-                <li><div class="box space-fci"></div>CONFEDERATE IMPERIUM</li>
-                <li><div class="box equo-stek"></div>EQUISIAN-STEK ZONE</li>
-                <li><div class="box space-ginger"></div>GINGERLANDZ</li>
-                <li><div class="box space-lop"></div>LEGION OF PEACE</li>
+                <li><div class="box placeholder"></div>PLACEHOLDER</li>
+                <li><div class="box placeholder"></div>PLACEHOLDER</li>
+                <li><div class="box placeholder"></div>PLACEHOLDER</li>
+                <li><div class="box placeholder"></div>PLACEHOLDER</li>
+                <li><div class="box placeholder"></div>PLACEHOLDER</li>
+                <li><div class="box placeholder"></div>PLACEHOLDER</li>
         </ul>
      </div>
      <div class="newHeadings">
         <ul class="list">
-                <li><div class="box space-mant"></div>MANTEÑOS</li>
-                <li><div class="box NEF"></div>NEF</li>
-                <li><div class="box space-PGF"></div>PINO GRAND FENWICK</li>
-                <li><div class="box space-RDA"></div>REPUBLIC DEFENCE ARMY</li>
-                <li><div class="box stek"></div>STEKARUS</li>
-                <li><div class="box space-mark"></div>TEUTIONIA</li>
+                <li><div class="box placeholder"></div>PLACEHOLDER</li>
+                <li><div class="box placeholder"></div>PLACEHOLDER</li>
+                <li><div class="box placeholder"></div>PLACEHOLDER</li>
+                <li><div class="box placeholder"></div>PLACEHOLDER</li>
+                <li><div class="box placeholder"></div>PLACEHOLDER</li>
+                <li><div class="box placeholder"></div>PLACEHOLDER</li>
         </ul>
      </div>
      <div class="newHeadings">
         <ul class="list">
-                <li><div class="box space-ugr"></div>THE GREATER REPUBLICS</li>
-                <li><div class="box space-ash"></div>THE UNITED LANDS OF ASH</li>
-                <li><div class="box space-tribes"></div>21 TRIBES</li>
-                <li><div class="box space-upr"></div>REPUBLICA</li>
-                <li><div class="box space-ws"></div>SUBURBIA PURLIEU</li>
-                <li><div class="box AV"></div>AVANT VANGUARD</li>
+                <li><div class="box placeholder"></div>PLACEHOLDER</li>
+                <li><div class="box placeholder"></div>PLACEHOLDER</li>
+                <li><div class="box placeholder"></div>PLACEHOLDER</li>
+                <li><div class="box placeholder"></div>PLACEHOLDER</li>
+                <li><div class="box placeholder"></div>PLACEHOLDER</li>
+                <li><div class="box placeholder"></div>PLACEHOLDER</li>
         </ul>
      </div>
      <div class="newHeadings">
         <ul class="list">
-                <li><div class="box fuchsia"></div>FUCHSIA</li>
-                <li><div class="box icc"></div>ICC</li>
-                <li><div class="box fydoria"></div>FYDORIA</li>
+                <li><div class="box placeholder"></div>PLACEHOLDER</li>
+                <li><div class="box placeholder"></div>PLACEHOLDER</li>
+                <li><div class="box placeholder"></div>PLACEHOLDER</li>
+                <li><div class="box placeholder"></div>PLACEHOLDER</li>
+                <li><div class="box placeholder"></div>PLACEHOLDER</li>
+                <li><div class="box placeholder"></div>PLACEHOLDER</li>
         </ul>
      </div>
      <div id="spaceDate" class="legendcontent">
-        <p>Updated 5th July 2018</p>
+        <p>Updated 16th July 2018</p>
       </div>
   </div>
 </div>
+
+<div id="InfoTab" class="tabcontent">
+
+<div class="row">
+  <div id="leftColumn" class="column" style="width: 20%; ">
+    <h2></h2>
+  </div>
+  <div id="centreColumn" class="column" style="width: 60%;">
+    <div id="mainHeading"><h1>Request territory on the map</h1></div>
+    <div id="secondaryHeading"><h2><a href="https://docs.google.com/spreadsheets/d/1gfwoSR3S5tKJSj1ab-4edHINU6O9mPUEwRAMvgyJHJU/edit?usp=sharing" target="_blank">Check the status of your request</a></h2></div>
+    <div id="text" >When making a request, be reasonable. Keep in mind that there are plenty of people in the Federacy, and that size isn't everything. Larger nations will have de facto more land, so if you are a smaller nation, act like it.
+
+</div>
+    <div id="claimForm" align="center" >
+    	<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfc3VMHZN8Zlm7w89C2BxBNWEPYes1AiE9aEf3OEnMSFN1HJA/viewform?bc=transparent&embedded=true" width="700" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    </div>
+  </div>
+
+  <div id="rightColumn" class="column" style="width: 20%;">
+    <h2></h2>
+  </div>
+</div>
+
+</div>
+
+</div>
     
+
+ <style>
+ .column {
+    float: left;
+    padding: 10px;
+    height: 100%; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#textInfo {
+    font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+    letter-spacing: .01rem;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 19px;
+    line-height: 1.58;
+    letter-spacing: -.003em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+#leftInfoColumn {
+  text-align: right;
+  padding-right: 40px
+}
+#centreInfoColumn {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+#rightInfoColumn {
+  padding-left: 40px;
+}
+#mainInfoHeading {
+    font-family: Merriweather;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 45px;
+    padding-top: 75px;
+}
+#secondaryInfoHeading {
+    font-family: Merriweather;
+    font-weight: 700;
+    font-size: 25px;
+    padding-bottom: 35px;
+    padding-top: 13px;
+}
+.titlesInfo {
+    font-family: Merriweather;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 35px;
+    padding-top: 40px;
+    padding-bottom: 35px;
+}
+ </style>   
   <style>
   #claim {
     color: #000000;
@@ -361,7 +379,7 @@ background-color:#000000;
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Karla', sans-serif;
     }
     #preloadedImages
     {
@@ -375,14 +393,15 @@ background-color:#000000;
   
     }
     #divHeading {
-      background: #1c1b1b;
-      padding: 3%;
+      background: #f5f5f5;
       font-weight: 900;
       text-align: left;
+      padding: 2%;
       vertical-align: middle;
       display: inline-block;
       width: 100%;
       box-sizing: border-box;
+
     }
     
     #SpaceTab {
@@ -396,19 +415,7 @@ background-color:#000000;
       image-rendering: smooth;
       
     }
-    
-    #earth {
-      text-align: center;
-      background: #014197;
-      
-    }
-    #earthlegend {
-      background: #014197;
-      color: #f5f5f5;
-      text-align: center;
-      padding-top: 1cm;
-      
-    }
+   
     
     #spaceLabels {
       background: #808080;
@@ -416,11 +423,6 @@ background-color:#000000;
       text-align: center;
       padding-top: 1cm;
       
-    }
-    .ELHeadings {
-      font-weight: 900;
-      font-size: 25px;
-      text-align: left;
     }
     ul {
       margin: 1em 0;
@@ -462,6 +464,10 @@ background-color:#000000;
       background: #f5f5f5;
       color:#000000;
     }
+
+        .placeholder {
+    	background: #000000;
+    }
     .box {
     float: left;
     width: 18px;
@@ -470,200 +476,19 @@ background-color:#000000;
     margin-right: 15px;
     vertical-align: text-bottom;
     }
-    .tribes {
-      background: #009942;
-    }
-    .ash {
-      background: #92b848;
-    }
-    .cccp {
-      background: #c7bee6;
-    }
-    .dominion {
-      background: #f27478;
-    }
-    .LoP {
-      background: #9afc77;
-    }
-    .PGF {
-      background: #ffc70f;
-    }
-    .prussoivoria {
-      background: #257acf;
-    }
-    .brit {
-      background: #6867c1;
-    }
-    .artite_earth {
-      background: #6ba200;
-    }
-    .hawaii {
-      background: #2ed9d9;
-    }
-    .RDA {
-      background: #b87a58;
-    }
-    .UPR {
-      background: #d42222;
-    }
-    .saltrandra {
-      background: #7a3d3f;
-    }
-    .teut {
-      background: #870446;
-    }
-    .suburbia {
-      background: #ffee00;
-    }
-    .cali {
-      background: #4e6ef2;
-    }
-    .spanishconfederation {
-      background: #9c593d;
-    }
-    .scotland {
-      background: #9c593d;
-    }
-    .frenchkingdom {
-      background: #2424b2;
-    }
-    .prosperity {
-      background: #48bdbd;
-    }
-    .AC {
-      background: #58d2ff;
-    }
-    .spanishrepublic {
-      background: #99002e;
-    }
-    .fci {
-      background: #ff7b00;
-    }
-    .california {
-      background: #6f92bd;
-    }
-    .sanfran {
-      background: #6f227d;
-    }
-    .argo {
-      background: #a249a3;
-    }
-    .mant {
-      background: #73b6fa;
-    }
-    .ugr {
-      background: #35d404;
-    }
-    .artite {
-      background: #7f7f7f;
-    }
-    .space-cccp {
-      background: #1f5f9f;
-    }
-    .space-fci {
-      background: #808040;
-    }
-    .ginger {
-      background: #ff7f27;
-    }
-    .equo-stek {
-      background: #d6187b;
-    }
-    .space-ginger {
-      background: #80ffff;
-    }
-    .space-lop {
-      background: #b97957;
-    }
-    .space-mant {
-      background: #ffffff;
-    }
-    .NEF {
-      background: #fb00ff;
-    }
-    .space-PGF {
-      background: #fd8787;
-    }
-    .space-RDA {
-      background: #00b7b7;
-    }
-    .sihn {
-      background: #8a8a8a;
-    }
-    .stek {
-      background: #dd9701;
-    }
-    .space-mark {
-      background: #cb0033;
-    }
-    .ebony {
-      background: #c7bfe7;
-    }
-    .space-ugr {
-      background: #99d9e9;
-    }
-    .space-prussia {
-      background: #b5e51d;
-    }
-    .space-ash {
-      background: #fffb00;
-    }
-    .space-tribes {
-      background: #00cb33;
-    }
-    .space-upr {
-      background: #ff7f27;
-    }
-    .space-ws {
-      background: #00cb33;
-    }
-    .NRS {
-      background: #498d5a;
-    }
-    .orks {
-      background: #f88aff;
-    }
-    .soviet {
-      background: #dd2c2c
-    }
-    .AV {
-      background: #ffd700;
-    }
-    .morakaya {
-      background: #4687ff;
-    }
-    .dokistan {
-      background: #33d900;
-    }
-    .iaf {
-      background: #8e67ac;
-    }
-    .wyoming {
-      background: #2447db;
-    }
-    .fuchsia {
-      background: #90297f;
-    }
-    .fydoria {
-      background: #3744c4;
-    }
-    .icc {
-      background: #009966;
-    }
-    .newMant {
-      background: #5a85ff;
-    }
+
     #spaceButton {
       background-color: #000000;
     }
     .buttons {
       background-color: #000000;
       float: right;
-      padding: 20px 22px;
       font-size: 30px;
       color: #f5f5f5;
-      margin: 0;
-      vertical-align: bottom;
+      margin:0;
+      font-family:Rubik;
+      padding: 16px 18px;
+
       
     }
     .buttonBehaviour {
@@ -696,20 +521,20 @@ background-color:#000000;
     }
     
     #spaceButton:hover {
-      background-color: #484848;
+      background-color: #808080;
     }
     #defaultOpen.active {
       background-color: #014197;
     }
     #spaceButton.active {
-      background-color: #484848;
+      background-color: #808080;
     }
     #info.active {
-      background-color: #f5f5f5;
+      background-color: #e0e0e0;
       color: #000000;
     }
     #info:hover {
-      background-color: #f5f5f5;
+      background-color: #e0e0e0;
       color: #000000;
     }
     #info {
@@ -753,7 +578,7 @@ background-color:#000000;
       evt.currentTarget.className += " active";
   }
       document.getElementById("MobileEarth").click();
-      document.getElementById("defaultOpen").click();
+      document.getElementById("spaceButton").click();
 
 
       
