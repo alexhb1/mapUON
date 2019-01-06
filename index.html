@@ -15,14 +15,15 @@
       <link rel="prefetch" as="image" href="coordinategrid.png">
     <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rubik:500,700" rel="stylesheet">
-  
+    <link rel="stylesheet" href="mapColor.css">
   </head>
   <body>
 
   <div id="divHeading">
-      <button style="font-weight: 700;" id="spaceButton" id="defaultOpen" class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'SpaceTab');document.body.style.backgroundColor = '#484848';">MAP</button>
-      <button style="font-weight: 700;" class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'InfoTab');document.body.style.backgroundColor = '#f5f5f5';" id="info">REQUESTS</button>
-            <button id="regionheading" style="font-weight: 700;" class="buttons buttonBehaviour" >THE GALACTIC FEDERACY</button>
+      <button style="font-weight: 700;" id="spaceButton"  class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'SpaceTab');document.body.style.backgroundColor = '#484848';">SPACE</button>
+      <button style="font-weight: 700;" id="earthButton"  class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'EarthTab');document.body.style.backgroundColor = '#014197';">EARTH</button>
+      <button style="font-weight: 700;" class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'InfoTab');document.body.style.backgroundColor = '#f5f5f5';" id="info">+</button>
+            <button id="regionheading" style="font-weight: 700;" class="buttons buttonBehaviour" >THE UNIVERSAL ORDER OF NATIONS</button>
 
   </div>
 
@@ -204,6 +205,83 @@ background-color:#808080;
 /* Styles */
 }
 </style>
+</style>
+  
+  <div id="EarthTab" class="tabcontent">
+    <div id="earth">
+      <img id="earthmap" src="EarthMap.png" style="width: 100%;">
+    </div>
+    <div id="earthlegend" style="overflow-x:auto;">
+
+  <div id="table">
+   <div class="newHeadings">
+      <h2 class="headings">AFRICA</h2>
+      <ul class="list">
+              <li><div class="box testColor"></div>PINO GRAND FENWICK</li>
+              <li><div class="box testColor"></div>GINGERLANDZ</li>
+              <li><div class="box testColor"></div>ARTITE</li>
+              <li><div class="box testColor"></div>RTSSR</li>
+              <li><div class="box testColor"></div>STEKARUS</li>
+      </ul>
+   </div>
+   <div class="newHeadings">
+      <h2 class="headings">ASIA</h2>
+      <ul class="list">
+              <li><div class="box testColor"></div>THE UNITED LANDS OF ASH</li>
+              <li><div class="box testColor"></div>PINO GRAND FENWICK</li>
+              <li><div class="box testColor"></div>REPUBLIC DEFENCE ARMY</li>
+              <li><div class="box testColor"></div>UNITED PROVINCES OF REPUBLICA</li>
+              <li><div class="box testColor"></div>GREATER DOKISTAN</li>
+      </ul>
+   </div>
+   <div class="newHeadings">
+      <h2 class="headings">OCEANIA</h2>
+      <ul class="list">
+              <li><div class="box testColor"></div>WEST SUBURBIA</li>
+              <li><div class="box testColor"></div>MORAKAYA</li>
+      </ul>
+   </div>
+   <div class="newHeadings">
+      <h2 class="headings">EUROPE</h2>
+      <ul class="list">
+              <li><div class="box testColor"></div>THE TRIBAL COMMONWEALTH</li>
+              <li><div class="box testColor"></div>PINO GRAND FENWICK</li>
+              <li><div class="box testColor"></div>STEKARUS</li>
+              <li><div class="box testColor"></div>TEUTIONIA</li>
+              <li><div class="box testColor"></div>RTSSR</li>
+              <li><div class="box testColor"></div>WATCH THIS SPACE</li>
+              <li><div class="box testColor"></div>IAF</li>
+      </ul>
+   </div>
+   <div class="newHeadings">
+      <h2 class="headings">N. AMERICA</h2>
+      <ul class="list">
+              <li><div class="box testColor"></div>CCCP</li>
+              <li><div class="box testColor"></div>CONFEDERATE IMPERIUM</li>
+              <li><div class="box testColor"></div>REPUBLIC DEFENCE ARMY</li>
+              <li><div class="box testColor"></div>SAN FRANCISCO</li>
+              <li><div class="box testColor"></div>WEST SUBURBIA</li>
+              <li><div class="box testColor"></div>NEW DESERET REALMS</li>
+              <li><div class="box testColor"></div>WYOMING PEOPLE'S FRONT</li>
+      </ul>
+   </div>
+   <div class="newHeadings">
+      <h2 class="headings">S. AMERICA</h2>
+      <ul class="list">
+              <li><div class="box testColor"></div>CCCP</li>
+              <li><div class="box testColor"></div>MANTENO ARGONIA</li>
+              <li><div class="box testColor"></div>MANTENOS</li>
+              <li><div class="box testColor"></div>THE GREATER REPUBLICS</li>
+      </ul>
+   </div>
+</div>
+      <div id="spaceDate" class="legendcontent" style="margin-top: 3%;margin-bottom: 2%;text-align:center;color:#f5f5f5">
+        <p>Updated 5th July 2018</p>
+      </div>
+    </div>
+  </div>
+
+
 <div id="SpaceTab" class="tabcontent">
     <div id="space">
       <img id="spaceMap" style="width: 75%;">
@@ -478,10 +556,21 @@ background-color:#808080;
     }
 
     #spaceButton {
-      background-color: #000000;
+      background-color: #f5f5f5;
+      color: #000000;
     }
+
+    #earthButton {
+      background-color: #f5f5f5;
+      color: #000000;
+    }
+    #info {
+      background-color: #f5f5f5;
+      color: #000000;
+    }
+
     .buttons {
-      background-color: #000000;
+      background-color: #f5f5f5;
       float: right;
       font-size: 30px;
       color: #f5f5f5;
@@ -493,7 +582,7 @@ background-color:#808080;
     }
     .buttonBehaviour {
       overflow: hidden;
-      background-color: #000000;
+      background-color: #f5f5f5;
       text-align: middle;
       transition: 0.1s;
       border: none;
@@ -523,13 +612,19 @@ background-color:#808080;
     }
     
     #spaceButton:hover {
-      background-color: #808080;
+      background-color: #e0e0e0;
+    }
+    #earthButton:hover {
+      background-color: #e0e0e0;
     }
     #defaultOpen.active {
       background-color: #014197;
     }
     #spaceButton.active {
-      background-color: #808080;
+      background-color: #e0e0e0;
+    }
+    #earthButton.active {
+      background-color: #e0e0e0;
     }
     #info.active {
       background-color: #e0e0e0;
@@ -539,9 +634,7 @@ background-color:#808080;
       background-color: #e0e0e0;
       color: #000000;
     }
-    #info {
-      background: #000000;
-    }
+
     .tabcontent {
       display: none;
       border-top: none;
@@ -579,8 +672,8 @@ background-color:#808080;
       document.getElementById(mapName).style.display = "block";
       evt.currentTarget.className += " active";
   }
-      document.getElementById("MobileEarth").click();
-      document.getElementById("spaceButton").click();
+      document.getElementById("earthButton").click();
+
 
 
       
