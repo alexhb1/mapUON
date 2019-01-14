@@ -12,7 +12,7 @@
   
     gtag('config', 'UA-106544095-1');
   </script>
-      <link rel="prefetch" as="image" href="coordinategrid.png">
+      <link rel="prefetch" as="image" href="hyperlanegrid.png">
     <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rubik:500,700" rel="stylesheet">
     <link rel="stylesheet" href="mapColor.css">
@@ -20,7 +20,7 @@
   <body>
 
   <div id="divHeading">
-      <button style="font-weight: 700;" id="spaceButton"  class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'SpaceTab');document.body.style.backgroundColor = '#484848';">SPACE</button>
+      <button style="font-weight: 700;" id="spaceButton"  class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'SpaceTab');document.body.style.backgroundColor = '#fdc72e';">SPACE</button>
       <button style="font-weight: 700;" id="earthButton"  class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'EarthTab');document.body.style.backgroundColor = '#014197';">EARTH</button>
       <button style="font-weight: 700;" class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'InfoTab');document.body.style.backgroundColor = '#f5f5f5';" id="info">+</button>
             <button id="regionheading" style="font-weight: 700;" class="buttons buttonBehaviour" >THE UNIVERSAL ORDER OF NATIONS</button>
@@ -95,7 +95,7 @@ background-color:#808080;
 .headings {
   text-align: left;
   padding-left:26%;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 #table {
@@ -195,7 +195,7 @@ background-color:#808080;
       display: none;
       size:none;
     }
-    #coordinatebuttonDiv {
+    #hyperlanebuttonDiv {
       margin-top:30px;
       margin-bottom:20px;
     }
@@ -209,7 +209,7 @@ background-color:#808080;
   
   <div id="EarthTab" class="tabcontent">
     <div id="earth">
-      <img id="UONearthmap" src="Earth_Map" style="width: 100%;">
+      <img id="earthmap" src="Earth_Map.png" style="width: 100%;">
     </div>
     <div id="earthlegend" style="overflow-x:auto;">
 
@@ -275,46 +275,47 @@ background-color:#808080;
       </ul>
    </div>
 </div>
-      <div id="spaceDate" class="legendcontent" style="margin-top: 3%;margin-bottom: 2%;text-align:center;color:#f5f5f5">
-        <p>Updated 13th January 2019</p>
-      </div>
-    </div>
-  </div>
+		<div class="spaceDate" style="color:#000000">
+        	<p class="footer">Updated 13th January 2019</p>
+        	<p class="footer">Made by <img src="alexfavicon.png"> Alex and <img src="aidanfavicon.png"> Aidan</p>
+		</div>
+	</div>
+</div>
 
 
 <div id="SpaceTab" class="tabcontent">
     <div id="space">
-      <img id="spaceMap" style="width: 75%;">
+      <img id="spaceMap" style="width: 60%;">
     </div>
     <script>
-      document.getElementById("spaceMap").src = "Space_Map";
+      document.getElementById("spaceMap").src = "Space_Map.png";
   
       var clicked = false;
       
-      function clickCoordinate() {
-            document.getElementById("CoordinateButton").click();
+      function clickhyperlane() {
+            document.getElementById("hyperlaneButton").click();
     }
   
-      function toggleBtnClickCoordinate() {
+      function toggleBtnClickhyperlane() {
         var img = document.getElementById('spaceMap');
         if (clicked) {
-          img.src = "Coordinates.png";
+          img.src = "Space_Map_H.png";
           clicked = false;
         } else {
-          img.src = "SpaceMap.png";
+          img.src = "Space_Map.png";
           clicked = true;
         }
       }
-      toggleBtnClickCoordinate()
+      toggleBtnClickhyperlane()
   
     </script>
   
-    <div id="coordinatebuttonDiv" style="text-align: center; padding-top:3%;padding-bottom:5%;">
-      <a style="font-size: 25px; font-weight: 800;" onclick="toggleBtnClickCoordinate()" id="CoordinateButton">COORDINATES</a>
+    <div id="hyperlanebuttonDiv" style="text-align: center; padding-top:3%;padding-bottom:5%;">
+      <a style="font-size: 25px; font-weight: 800;" onclick="toggleBtnClickhyperlane()" id="hyperlaneButton">HYPERLANES</a>
     </div>
 
 
-  <div id="table">
+  <div id="table" style="color: #000000;">
      <div class="newHeadings">
         <ul class="list">
                 <li><div class="box placeholder"></div>PLACEHOLDER</li>
@@ -355,9 +356,11 @@ background-color:#808080;
                 <li><div class="box placeholder"></div>PLACEHOLDER</li>
         </ul>
      </div>
-     <div id="spaceDate" class="legendcontent" style="margin-top: 3%;margin-bottom: 2%">
-        <p>Updated 13th January 2019</p>
-      </div>
+
+	<div class="spaceDate" style="width:100%">
+        <p class="footer">Updated 13th January 2019</p>
+        <p class="footer">Made by <img src="alexfavicon.png"> Alex and <img src="aidanfavicon.png"> Aidan</p>
+	</div>
   </div>
 </div>
 
@@ -467,27 +470,45 @@ background-color:#808080;
         background-image: url(Space.png);
         background-image: url(EarthPlain.png);
         background-image: url(EarthDetailled.png);
-        background-image: url(coordinategrid.png);
+        background-image: url(hyperlanegrid.png);
   
     }
     #divHeading {
       background: #f5f5f5;
       font-weight: 900;
       text-align: left;
-      padding: 2%;
+      padding: 1.3%;
       vertical-align: middle;
       display: inline-block;
       width: 100%;
       box-sizing: border-box;
 
     }
+
+    .spaceDate {
+      margin-top:1cm;
+      background: #f5f5f5;
+      font-weight: 900;
+      text-align: left;
+      padding-top: 0.8%;
+      padding-bottom: 0.8%;
+      vertical-align: middle;
+      display: inline-block;
+      width: 100%;
+
+
+    }
+
+    .footer {
+    	padding-left: 1cm;
+    }
     
     #SpaceTab {
-      background: #808080;
+      background: #fdc72e;
     }
     
     #space {
-      background: #808080;
+      background: #fdc72e;
       text-align: center;
       padding-top: 1cm;
       image-rendering: smooth;
@@ -496,7 +517,7 @@ background-color:#808080;
    
     
     #spaceLabels {
-      background: #808080;
+      background: #fdc72e;
       color: #f5f5f5;
       text-align: center;
       padding-top: 1cm;
@@ -510,11 +531,11 @@ background-color:#808080;
       margin: 0.5em 0;
     }
     
-    #CoordinateButton.active {
+    #hyperlaneButton.active {
       background: #f5f5f5;
       color: #000000;
     }
-    #CoordinateButton:hover {
+    #hyperlaneButton:hover {
       background: #f5f5f5;
       color: #000000;
     }
@@ -589,7 +610,7 @@ background-color:#808080;
       outline: none;
       cursor: pointer;
     }
-    #CoordinateButton {
+    #hyperlaneButton {
       float: center;
       border: none;
       outline: none;
@@ -612,19 +633,21 @@ background-color:#808080;
     }
     
     #spaceButton:hover {
-      background-color: #e0e0e0;
+      background-color: #ffd45b;
     }
     #earthButton:hover {
-      background-color: #e0e0e0;
+      background-color: #0053c2;
+      color: #ffffff;
     }
     #defaultOpen.active {
       background-color: #014197;
     }
     #spaceButton.active {
-      background-color: #e0e0e0;
+      background-color: #fdc72e;
     }
     #earthButton.active {
-      background-color: #e0e0e0;
+      background-color: #014197;
+      color:#ffffff;
     }
     #info.active {
       background-color: #e0e0e0;
@@ -646,7 +669,7 @@ background-color:#808080;
       animation: fadeEffect 0.5s;
       vertical-align: middle;
     }
-    #CoordinateButton.active {
+    #hyperlaneButton.active {
       background-color: #ffffff;
     }
     @-webkit-keyframes fadeEffect {
