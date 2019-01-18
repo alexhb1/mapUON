@@ -1,0 +1,11 @@
+Main space map
+
+Outer Border: Opacity 80%
+Inner Border: Opacity 100%
+Hyperlanes: Opacity 50%
+
+Hyperlane map
+
+Outer Border: Opacity 40%
+Inner Border: Opacity 50%
+Hyperlanes: Opacity 100%
