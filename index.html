@@ -23,68 +23,53 @@
       <button style="font-weight: 700;" id="spaceButton"  class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'SpaceTab');document.body.style.backgroundColor = '#fdc72e';">SPACE</button>
       <button style="font-weight: 700;" id="earthButton"  class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'EarthTab');document.body.style.backgroundColor = '#014197';">EARTH</button>
       <button style="font-weight: 700;" class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'InfoTab');document.body.style.backgroundColor = '#f5f5f5';" id="info">+</button>
-            <button id="regionheading" style="font-weight: 700;" class="buttons buttonBehaviour" >THE UNIVERSAL ORDER OF NATIONS</button>
-
+       <button id="regionheading" style="font-weight: 700;" class="buttons buttonBehaviour" >THE UNIVERSAL ORDER OF NATIONS</button>
   </div>
 
-  <div id="mobileFlagDiv" align="center" style="background-color:#f5f5f5;"><img id="mobileFlag" src="Flag.png" style="width:15%;"></div>
-  <div id="mobileHeadingDiv" align="center">THE GALACTIC FEDERACY</div>
-  <div id="mobileButtonDiv" align="center">
-  <button id="MobileEarth" class="tablinks mobileButtons buttonBehaviour" onclick="openMap(event, 'EarthTab');document.body.style.backgroundColor = '#014197';">EARTH</button><button id="MobileSpace" class="tablinks mobileButtons buttonBehaviour" onclick="openMap(event, 'SpaceTab');document.body.style.backgroundColor = '#484848';">MAP</button><button id="MobileInfo" class="tablinks mobileButtons buttonBehaviour" onclick="openMap(event, 'InfoTab');document.body.style.backgroundColor = '#f5f5f5';">REQUESTS</button>
-  </div>
 
 <style>
+
+.buttons {
+	background-color: #f5f5f5;
+	color: #f5f5f5;
+	font-size:30px;
+	float:right;
+  	margin:0;
+  	font-family:Rubik;
+  	padding: 16px 18px;
+
+  
+}
+.buttonBehaviour {
+  	overflow: hidden;
+  	background-color: #f5f5f5;
+  	transition: 0.1s;
+  	border: none;
+  	outline: none;
+  	cursor: pointer;
+}
+
+#divHeading {
+  	background: #f5f5f5;
+  	font-weight: 900;
+  	text-align: left;
+  	padding: 1.3%;
+  	vertical-align: middle;
+  	display: inline-block;
+  	width: 100%;
+  	box-sizing: border-box;
+
+}
 
  #regionheading {
-      font-weight: 900;
-      vertical-align: middle;
-      background-color: #f5f5f5;
-      float: left;
-      font-size: 30px;
-      color: #f5f5f5;
+    font-weight: 900;
+    vertical-align: middle;
+    background-color: #f5f5f5;
+    float: left;
+    font-size: 30px;
+    color: #f5f5f5;
       
     }
-.mobileButtons {
-      display:inline;
-      background-color: #000000;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      padding: 10px 11px;
-      transition: 0.1s;
-      font-size: 20px;
-      color: #f5f5f5;
-      vertical-align: bottom;
-      overflow: hidden;
-      text-align: middle;
-      font-weight:900;
-}
-#mobileButtonDiv {
-  background-color:#1c1b1b;
-  padding-bottom: 10px;
-}
-
-#mobileSpace {
-background-color:#808080;
-}
-#mobileHeadingDiv { 
-  width: 100%;
-  color: #f5f5f5; 
-  font-size: 20px; 
-  color:#ffffff;
-  text-decoration: none;
-  background-color:#1c1b1b;
-  font-weight: 900;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  padding-left:15px;
-  padding-right:15px;
-  box-sizing: border-box;
-  text-align: center;
-}
-</style>
-
-<style>
 .list {
   text-align: left;
   padding-left: 25%;
@@ -136,76 +121,19 @@ background-color:#808080;
   font-weight: 700;
 }
 
-@media only screen and (min-width: 601px) {
-  #mobileButtonDiv {
-    display:none;
-  }
-  #mobileHeadingDiv {
-    display: none;
-  }
-  #mobileFlagDiv {
-    display:none;
-  }
-  #heading {
-    box-sizing: border-box;
-    width: 100%;
-  }
+
+@media only screen and (max-width: 1024px) {
+	#regionheading {
+		font-size:25px;
+	}
 }
 
-@media only screen and (max-width: 600px) {
-    .buttons {
-      float:middle;
-    }
-    #regionheading {
-      font-size:20px;
-      text-align: middle;
-      margin:none;
-      display: inline;
-      width: 100%;
-    }
-
-    #table {
-        width:80%;
-        padding-left:10%;
-    }
-    .list {
-      padding-left:5%;
-    }
-    #divButton {
-      float: none;
-      font-size:10px;
-      display:none;
-    }
-    #regionheading {
-      display: none;
-    }
-    .buttons {
-      display: none;
-    }
-    #flag {
-      display: none;
-      vertical-align: none; 
-      width: none;
-    }
-    #link {
-      display: none;
-      size:none;
-    }
-    #divHeading {
-      display: none;
-      size:none;
-    }
-    #hyperlanebuttonDiv {
-      margin-top:30px;
-      margin-bottom:20px;
-    }
 
 
-}
-/* Styles */
-}
+
+
 </style>
-</style>
+
   
   <div id="EarthTab" class="tabcontent">
     <div id="earth">
@@ -285,7 +213,7 @@ background-color:#808080;
 
 <div id="SpaceTab" class="tabcontent">
     <div id="space">
-      <img id="spaceMap" style="width: 60%;">
+      <img id="spaceMap">
     </div>
     <script>
       document.getElementById("spaceMap").src = "Space_Map.png";
@@ -317,7 +245,7 @@ background-color:#808080;
 
   <div id="table" style="color: #000000;">
      <div class="newHeadings">
-        <ul class="list">
+        <ul id="spaceList" class="list">
                 <li><div class="box placeholder"></div>PLACEHOLDER</li>
                 <li><div class="box placeholder"></div>PLACEHOLDER</li>
                 <li><div class="box placeholder"></div>PLACEHOLDER</li>
@@ -327,7 +255,7 @@ background-color:#808080;
         </ul>
      </div>
      <div class="newHeadings">
-        <ul class="list">
+        <ul id="spaceList" class="list">
                 <li><div class="box placeholder"></div>PLACEHOLDER</li>
                 <li><div class="box placeholder"></div>PLACEHOLDER</li>
                 <li><div class="box placeholder"></div>PLACEHOLDER</li>
@@ -337,7 +265,7 @@ background-color:#808080;
         </ul>
      </div>
      <div class="newHeadings">
-        <ul class="list">
+        <ul id="spaceList" class="list">
                 <li><div class="box placeholder"></div>PLACEHOLDER</li>
                 <li><div class="box placeholder"></div>PLACEHOLDER</li>
                 <li><div class="box placeholder"></div>PLACEHOLDER</li>
@@ -347,7 +275,7 @@ background-color:#808080;
         </ul>
      </div>
      <div class="newHeadings">
-        <ul class="list">
+        <ul id="spaceList" class="list">
                 <li><div class="box placeholder"></div>PLACEHOLDER</li>
                 <li><div class="box placeholder"></div>PLACEHOLDER</li>
                 <li><div class="box placeholder"></div>PLACEHOLDER</li>
@@ -368,7 +296,6 @@ background-color:#808080;
 
 <div class="row">
   <div id="leftColumn" class="column" style="width: 20%; ">
-    <h2></h2>
   </div>
   <div id="centreColumn" class="column" style="width: 60%;">
     <div id="mainHeading"><h1>Request territory on the map</h1></div>
@@ -415,17 +342,7 @@ background-color:#808080;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
-#leftInfoColumn {
-  text-align: right;
-  padding-right: 40px
-}
-#centreInfoColumn {
-  padding-left: 70px;
-  padding-right: 70px;
-}
-#rightInfoColumn {
-  padding-left: 40px;
-}
+
 #mainInfoHeading {
     font-family: Merriweather;
     font-style: italic;
@@ -448,8 +365,7 @@ background-color:#808080;
     padding-top: 40px;
     padding-bottom: 35px;
 }
- </style>   
-  <style>
+
   #claim {
     color: #000000;
     text-align: center;
@@ -473,17 +389,7 @@ background-color:#808080;
         background-image: url(hyperlanegrid.png);
   
     }
-    #divHeading {
-      background: #f5f5f5;
-      font-weight: 900;
-      text-align: left;
-      padding: 1.3%;
-      vertical-align: middle;
-      display: inline-block;
-      width: 100%;
-      box-sizing: border-box;
 
-    }
 
     .spaceDate {
       margin-top:1cm;
@@ -544,26 +450,7 @@ background-color:#808080;
       background: #f5f5f5;
       color: #000000;
     }
-    #MobileEarth:hover {
-      background: #014197;
-    }
-    #MobileSpace:hover {
-      background: #484848;
-    }
-    #MobileInfo:hover {
-      background: #f5f5f5;
-      color:#000000;
-    }
-    #MobileEarth.active {
-      background: #014197;
-    }
-    #MobileSpace.active {
-      background: #484848;
-    }
-    #MobileInfo.active {
-      background: #f5f5f5;
-      color:#000000;
-    }
+
 
         .placeholder {
     	background: #000000;
@@ -591,26 +478,7 @@ background-color:#808080;
       color: #000000;
     }
 
-    .buttons {
-      background-color: #f5f5f5;
-      float: right;
-      font-size: 30px;
-      color: #f5f5f5;
-      margin:0;
-      font-family:Rubik;
-      padding: 16px 18px;
 
-      
-    }
-    .buttonBehaviour {
-      overflow: hidden;
-      background-color: #f5f5f5;
-      text-align: middle;
-      transition: 0.1s;
-      border: none;
-      outline: none;
-      cursor: pointer;
-    }
     #hyperlaneButton {
       float: center;
       border: none;
@@ -681,6 +549,67 @@ background-color:#808080;
       from {opacity: 0;}
       to {opacity: 1;}
     }
+
+    #spaceMap {
+    	width: 60%;
+    }
+@media only screen and (max-width:600px) {
+
+	#regionheading {
+		display:none;
+	}
+	#info {
+		width:20%;
+		margin:0;
+	}
+	#earthButton {
+		width:40%;
+		margin:0;
+		float:left;
+	}
+	#spaceButton {
+		width:40%;
+		margin:0;
+	}
+	#divHeading {
+		margin:0;
+		padding:0;
+
+	}
+	.list {
+		padding-left:5%;
+	}
+	.headings {
+		padding-left:5%;
+	}
+	#spaceList {
+		padding-left:5em;
+	}
+	#hyperlanebuttonDiv {
+		margin-top:1em;
+		margin-bottom:1em;
+	}
+	#hyperlaneButton {
+		padding: 15px 17px;
+	}
+
+	#spaceMap {
+		width: 95%;
+	}
+	#leftColumn {
+	  display:none;
+	}
+	#centreInfoColumn {
+	  padding-left: 0;
+	  padding-right: 0;
+	}
+	#rightColumn {
+	  display:none;
+	}
+	.iframe {
+		width:100vw;
+	}
+}
     </style>
   <script>
     function openMap(evt, mapName) {
