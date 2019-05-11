@@ -90,10 +90,6 @@
 	background-color: #ffc90e;
 }
 
-.sicilia {
-	background-color: #ffe179;
-}
-
 .pgfSpace {
 	background-color: #fd8888;
 }
@@ -130,6 +126,10 @@
 	background-color: #a349a4;
 }
 
+.childSpace {
+	background-color: #a349a4;
+}
+
 .isariiEarth {
 	background-color: #ff7f27;
 }
@@ -145,10 +145,19 @@
 .artcorp {
 	background-color: #792779;
 }
+
 .ostrichSpace {
 	background-color: #5f9ea0;
 }
 
 .moravaEarth {
 	background-color: #262f91;
+}
+
+.fishlop {
+	background-color: #50c721;
+}
+
+.voro {
+	background-color: #3D59AB;
 }
