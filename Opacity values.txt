@@ -1,6 +1,6 @@
 Main space map
 
-Outer Border: Opacity 80%
+Outer Border: Opacity 60%
 Inner Border: Opacity 100%
 Hyperlanes: Opacity 50%
 
