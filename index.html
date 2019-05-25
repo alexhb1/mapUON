@@ -9,10 +9,10 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments)};
     gtag('js', new Date());
-  
+
     gtag('config', 'UA-106544095-1');
   </script>
-      <link rel="prefetch" as="image" href="hyperlanegrid.png">
+      <link rel="prefetch" as="image" href="Region_Map.png">
     <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rubik:500,700" rel="stylesheet">
     <link rel="stylesheet" href="mapColor.css">
@@ -38,7 +38,7 @@
   	font-family:Rubik;
   	padding: 16px 18px;
 
-  
+
 }
 .buttonBehaviour {
   	overflow: hidden;
@@ -68,7 +68,7 @@
     float: left;
     font-size: 30px;
     color: #f5f5f5;
-      
+
     }
 .list {
   text-align: left;
@@ -114,10 +114,10 @@
     }
 }
 #regionheading {
-  font-size: 35px; 
+  font-size: 35px;
   color:#000000;
   font-weight: 900;
-  font-family: Rubik; 
+  font-family: Rubik;
   font-weight: 700;
 }
 
@@ -134,7 +134,7 @@
 
 </style>
 
-  
+
   <div id="EarthTab" class="tabcontent">
     <div id="earth">
       <img id="earthmap" src="Earth_Map.png" style="width: 100%;">
@@ -148,7 +148,7 @@
               <li><div class="box lopEarth"></div>Ivoria (LoP)</li>
               <li><div class="box pgfEarth"></div>Hellenica</li>
               <li><div class="box einheitEarth"></div>Tribal Artite</li>
-              <li><div class="box artcorp"></div>Artienia Corporation</li>             
+              <li><div class="box artcorp"></div>Artienia Corporation</li>
 
       </ul>
    </div>
@@ -164,7 +164,7 @@
       <h2 class="headings">OCEANIA</h2>
       <ul class="list">
               <li><div class="box wsEarth"></div>Suburbia-Purlieu</li>
-              <li><div class="box isariiEarth"></div>Isarii</li>              
+              <li><div class="box isariiEarth"></div>Isarii</li>
       </ul>
    </div>
    <div class="newHeadings">
@@ -210,32 +210,62 @@
     <div id="space">
       <img id="spaceMap">
     </div>
+
+    <div id="spaceSwitchButtonDiv" style="text-align: center; padding-top:3%;padding-bottom:5%;padding-left:0;padding-right:0;">
+      <a id="NationButton" style="font-size: 25px; font-weight: 800;" onclick="toggleBtnClickNation()" class="spaceSwitchButton">Nations</a><a id="RegionButton" style="font-size: 25px; font-weight: 800;" onclick="toggleBtnClickRegion()" class="spaceSwitchButton">Regions</a>
+    </div>
+
     <script>
       document.getElementById("spaceMap").src = "Space_Map.png";
-  
-      var clicked = false;
-      
-      function clickhyperlane() {
-            document.getElementById("hyperlaneButton").click();
-    }
-  
-      function toggleBtnClickhyperlane() {
-        var img = document.getElementById('spaceMap');
-        if (clicked) {
-          img.src = "Space_Map_H.png";
-          clicked = false;
-        } else {
-          img.src = "Space_Map.png";
-          clicked = true;
-        }
+
+      function toggleBtnClickNation() {
+        document.getElementById("spaceMap").src = "Space_Map.png";
       }
-      toggleBtnClickhyperlane()
-  
+
+      function toggleBtnClickRegion() {
+        document.getElementById("spaceMap").src = "Region_Map.png";
+      }
+      toggleBtnClickNation()
     </script>
-  
-    <div id="hyperlanebuttonDiv" style="text-align: center; padding-top:3%;padding-bottom:5%;">
-      <a style="font-size: 25px; font-weight: 800;" onclick="toggleBtnClickhyperlane()" id="hyperlaneButton">HYPERLANES</a>
-    </div>
+<style>
+.spaceSwitchButton.active {
+  background: #f5f5f5;
+  color: #000000;
+}
+.spaceSwitchButton:hover {
+  background: #f5f5f5;
+  color: #000000;
+}
+.spaceSwitchButton {
+  float: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 18px 20px;
+  transition: 0.1s;
+  font-size: 30px;
+  color: #f5f5f5;
+  vertical-align: bottom;
+  font-family: Rubik;
+  font-weight:500;
+
+  background-color: #000000;
+  text-align: middle;
+  -webkit-animation: fadeEffect 0.5s;
+  animation: fadeEffect 0.5s;
+}
+.spaceSwitchButton.active {
+  background-color: #ffffff;
+}
+.spaceSwitchButtonDiv {
+  margin-top:1em;
+  margin-bottom:1em;
+}
+.spaceSwitchButton {
+  padding: 15px 17px;
+}
+</style>
+
 
 
   <div id="table" style="color: #000000;">
@@ -255,7 +285,7 @@
                 <li><div class="box stekSpace"></div>Stekarus</li>
                 <li><div class="box lopSpace"></div>The Rus</li>
                 <li><div class="box wsSpace"></div>Suburbia-Purlieu</li>
-                <li><div class="box childSpace"></div>Britannia</li>                
+                <li><div class="box childSpace"></div>Britannia</li>
         </ul>
      </div>
      <div class="newHeadings">
@@ -310,7 +340,7 @@
 </div>
 
 </div>
-    
+
 
  <style>
  .column {
@@ -380,8 +410,8 @@
         background-image: url(Space.png);
         background-image: url(EarthPlain.png);
         background-image: url(EarthDetailled.png);
-        background-image: url(hyperlanegrid.png);
-  
+        background-image: url(Region_Map.png);
+
     }
 
 
@@ -403,26 +433,26 @@
     .footer {
     	padding-left: 1cm;
     }
-    
+
     #SpaceTab {
       background: #fdc72e;
     }
-    
+
     #space {
       background: #fdc72e;
       text-align: center;
       padding-top: 1cm;
       image-rendering: smooth;
-      
+
     }
-   
-    
+
+
     #spaceLabels {
       background: #fdc72e;
       color: #f5f5f5;
       text-align: center;
       padding-top: 1cm;
-      
+
     }
     ul {
       margin: 1em 0;
@@ -431,15 +461,8 @@
     li {
       margin: 0.5em 0;
     }
-    
-    #hyperlaneButton.active {
-      background: #f5f5f5;
-      color: #000000;
-    }
-    #hyperlaneButton:hover {
-      background: #f5f5f5;
-      color: #000000;
-    }
+
+
     #AfricaButton:hover {
       background: #f5f5f5;
       color: #000000;
@@ -473,28 +496,11 @@
     }
 
 
-    #hyperlaneButton {
-      float: center;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      padding: 18px 20px;
-      transition: 0.1s;
-      font-size: 30px;
-      color: #f5f5f5;
-      vertical-align: bottom;
-      font-family: Rubik;
-      font-weight:500;
-      
-      background-color: #000000;
-      text-align: middle;
-      -webkit-animation: fadeEffect 0.5s;
-      animation: fadeEffect 0.5s;
-    }
+
     #defaultOpen:hover {
       background-color: #014197;
     }
-    
+
     #spaceButton:hover {
       background-color: #ffd45b;
     }
@@ -532,9 +538,7 @@
       animation: fadeEffect 0.5s;
       vertical-align: middle;
     }
-    #hyperlaneButton.active {
-      background-color: #ffffff;
-    }
+
     @-webkit-keyframes fadeEffect {
       from {opacity: 0;}
       to {opacity: 1;}
@@ -579,13 +583,7 @@
 	#spaceList {
 		padding-left:5em;
 	}
-	#hyperlanebuttonDiv {
-		margin-top:1em;
-		margin-bottom:1em;
-	}
-	#hyperlaneButton {
-		padding: 15px 17px;
-	}
+
 
 	#spaceMap {
 		width: 95%;
@@ -623,7 +621,7 @@
 
 
 
-      
+
     function chBackcolor(color) {
      document.body.style.background = color;
   }
