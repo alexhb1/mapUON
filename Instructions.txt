@@ -1,0 +1,11 @@
+Main Space Map:
+
+Regions turned off
+Borders: Opacity 100%
+
+Regions Map:
+
+Regions On
+Borders: Opacity 50%
+
+Save file with Region folder turned off
