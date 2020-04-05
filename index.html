@@ -212,7 +212,7 @@
     </div>
 
     <div id="spaceSwitchButtonDiv" style="text-align: center; padding-top:3%;padding-bottom:5%;padding-left:0;padding-right:0;">
-      <a id="NationButton" style="font-size: 25px; font-weight: 800;" onclick="toggleBtnClickNation()" class="spaceSwitchButton">Nations</a><a id="RegionButton" style="font-size: 25px; font-weight: 800;" onclick="toggleBtnClickRegion()" class="spaceSwitchButton">Regions</a>
+      <a id="NationButton" style="font-size: 25px; font-weight: 800;" onclick="toggleBtnClickNation()" class="spaceSwitchButton">Borders</a><a id="RegionButton" style="font-size: 25px; font-weight: 800;" onclick="toggleBtnClickRegion()" class="spaceSwitchButton">Regions</a><a id="DetailButton" style="font-size: 25px; font-weight: 800;" onclick="toggleBtnClickDetail()" class="spaceSwitchButton">Detail</a>
     </div>
 
     <script>
@@ -224,6 +224,10 @@
 
       function toggleBtnClickRegion() {
         document.getElementById("spaceMap").src = "Region_Map.png";
+      }
+
+      function toggleBtnClickDetail() {
+        document.getElementById("spaceMap").src = "Space_Map_Text.png";
       }
       toggleBtnClickNation()
     </script>
