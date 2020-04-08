@@ -145,11 +145,11 @@
 }
 
 .spaceUELVAN {
-	background-color: #42ebff;
+	background-color: #ff5656;
 }
 
 .spaceMERIDIAN {
-	background-color: #fd8888;
+	background-color: #0a06b0;
 }
 
 .spaceGRIPPLI {
@@ -165,11 +165,11 @@
 }
 
 .spaceSHEJIN {
-	background-color: #fd8888;
+	background-color: #8984d1;
 }
 
 .spaceAIDAN {
-	background-color: #fd8888;
+	background-color: #f95bff;
 }
 
 .spaceSHRIVE {
@@ -178,4 +178,8 @@
 
 .spaceTRAIKUPI {
 	background-color: #42ebff;
+}
+
+.spaceMORGUR {
+	background-color: #488214;
 }
