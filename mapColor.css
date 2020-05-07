@@ -1,169 +1,67 @@
-.testColor {
-	background-color: #f5f5f5;
+/* EARTH COLOURS */
+.earthFCI {
+	background-color: #ff7e00;
 }
 
-.teutioniaEarth {
-	background-color: #800000;
-}
-
-.teutioniaSpace {
-	background-color: #ad002b;
-}
-
-.republicaEarth {
-	background-color: #ed1c24;
-}
-
-.republicaSpace {
-	background-color: #d96c21;
-}
-
-.nefSpace {
-	background-color: #fa0bfd;
-}
-
-.equostek {
-	background-color: #d6187b;
-}
-
-.cccpEarth {
-	background-color: #c8bfe7;
-}
-
-.cccpSpace {
-	background-color: #1f5f9f;
-}
-
-.lopEarth {
-	background-color: #ffaec9;
-}
-
-.lopSpace {
-	background-color: #b97a57;
-}
-
-.wsEarth {
+.earthSUBURBIA {
 	background-color: #fff200;
 }
 
-.wsSpace {
-	background-color: #f7ed46;
+.earthARGONIA {
+	background-color: #7901ff;
 }
 
-.stekEarth {
-	background-color: #d9a220;
+.earthCCCP {
+	background-color: #cec4ee;
 }
 
-.stekSpace {
-	background-color: #ff6633;
-}
-
-.einheitEarth {
-	background-color: #009a44;
-}
-
-.einheitSpace {
-	background-color: #00cc33;
-}
-
-.ashEarth {
-	background-color: #6fa0cb;
-}
-
-.ashSpace {
-	background-color: #6fa0cb;
-}
-
-.ukaristSpace {
-	background-color: #c04f9d;
-}
-
-.dracoSpace {
-	background-color: #790000;
-}
-
-.pgfEarth {
-	background-color: #ffc90e;
-}
-
-.pgfSpace {
-	background-color: #fd8888;
-}
-
-.rdaEarth {
-	background-color: #b97a57;
-}
-
-.rdaSpace {
-	background-color: #0000ff;
-}
-
-.silbSpace {
-	background-color: #6a51a2;
-}
-
-.fedelSpace {
-	background-color: #66cc99;
-}
-
-.childEarth {
-	background-color: #a349a4;
-}
-
-.childSpace {
-	background-color: #a349a4;
-}
-
-.isariiEarth {
-	background-color: #ff7f27;
-}
-
-.canada {
+.earthCANADA {
 	background-color: #7092be;
 }
 
-.auriganSpace {
-	background-color: #4d5d53;
+.earthASH {
+	background-color: #2f91dc;
 }
 
-.artcorp {
-	background-color: #792779;
+.earthRDA {
+	background-color: #b97a57;
 }
 
-.ostrichSpace {
-	background-color: #5f9ea0;
+.earthCASCADIA {
+	background-color: #397c12;
 }
 
-.moravaEarth {
-	background-color: #262f91;
+.earthBRITTANIA {
+	background-color: #bd56bf;
 }
 
-.fishlop {
-	background-color: #50c721;
-}
-.xotusSpace {
-	background-color: #209111;
+.earthTRIBES {
+	background-color: #009a44;
 }
 
-.westafricancoastEarth {
-	background-color: #b5e61d;
+.earthTEUTIONIA {
+	background-color: #9f0000;
 }
 
-.moravaSpace {
-	background-color: #262f91;
+.earthPGF {
+	background-color: #ffc90e;
 }
-.russiansplinterstatesEarth {
+
+.earthLOP {
 	background-color: #ffa5f8;
 }
 
-.solnoanterritoriesSpace  {
-	background-color: #ff0000;
+.earthSTEK {
+	background-color: #d9a220;
 }
 
+.earthREPUBLICA {
+	background-color: #ffc90e;
+}
 
-/* EARTH COLOURS */
-
-
+.earthGREENASIA {
+	background-color: #ad002b;
+}
 /* SPACE COLOURS */
 
 .spaceTEUTIONIA {
@@ -247,11 +145,11 @@
 }
 
 .spaceUELVAN {
-	background-color: #42ebff;
+	background-color: #ff5656;
 }
 
 .spaceMERIDIAN {
-	background-color: #fd8888;
+	background-color: #0a06b0;
 }
 
 .spaceGRIPPLI {
@@ -267,11 +165,11 @@
 }
 
 .spaceSHEJIN {
-	background-color: #fd8888;
+	background-color: #8984d1;
 }
 
 .spaceAIDAN {
-	background-color: #fd8888;
+	background-color: #f95bff;
 }
 
 .spaceSHRIVE {
@@ -280,4 +178,8 @@
 
 .spaceTRAIKUPI {
 	background-color: #42ebff;
+}
+
+.spaceMORGUR {
+	background-color: #488214;
 }
