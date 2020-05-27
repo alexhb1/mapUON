@@ -4,15 +4,15 @@
 }
 
 .earthSUBURBIA {
-	background-color: #fff200;
+	background-color: #ffea00;
 }
 
 .earthARGONIA {
-	background-color: #7901ff;
+	background-color: #9c01ff;
 }
 
 .earthCCCP {
-	background-color: #cec4ee;
+	background-color: #bca9ff;
 }
 
 .earthCANADA {
@@ -59,9 +59,21 @@
 	background-color: #ffc90e;
 }
 
-.earthGREENASIA {
-	background-color: #ad002b;
+.earthSARAWAK {
+	background-color: #0054ff;
 }
+
+.earthALPAK {
+	background-color: #008039;
+}
+
+.earthYEAM {
+	background-color: #00642c;
+}
+
+
+
+
 /* SPACE COLOURS */
 
 .spaceTEUTIONIA {
