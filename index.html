@@ -1,5 +1,6 @@
   <!DOCTYPE html>
   <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Regional Maps</title>
@@ -16,123 +17,24 @@
     <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rubik:500,700" rel="stylesheet">
     <link rel="stylesheet" href="mapColor.css">
+    <link rel="stylesheet" href="style.css">
   </head>
+
+<style>    
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Karla', sans-serif;
+}</style>
   <body>
 
   <div id="divHeading">
-      <button style="font-weight: 700;" id="spaceButton"  class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'SpaceTab');document.body.style.backgroundColor = '#fdc72e';">SPACE</button>
-      <button style="font-weight: 700;" id="earthButton"  class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'EarthTab');document.body.style.backgroundColor = '#014197';">EARTH</button>
-      <button style="font-weight: 700;" class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'InfoTab');document.body.style.backgroundColor = '#f5f5f5';" id="info">+</button>
+      <button style="font-weight: 700;" id="spaceButton"  class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'SpaceTab');document.body.style.backgroundColor = '#fdc72e';">Space</button>
+      <button style="font-weight: 700;" id="earthButton"  class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'EarthTab');document.body.style.backgroundColor = '#014197';">Earth</button>
+      <button style="font-weight: 700;" id="infoButton"   class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'InfoTab');document.body.style.backgroundColor = '#f5f5f5';" >+</button>
       <div id="title"><a id="regionheading" style="font-weight: 700;" class="buttons buttonBehaviour" >THE UNIVERSAL ORDER OF NATIONS</a></div>
   </div>
 
-
-<style>
-
-.buttons {
-	background-color: #f5f5f5;
-	color: #f5f5f5;
-	font-size:30px;
-	float:right;
-  	margin:0;
-  	font-family:Rubik;
-  	padding: 16px 18px;
-
-
-}
-.buttonBehaviour {
-  	overflow: hidden;
-  	background-color: #f5f5f5;
-  	transition: 0.1s;
-  	border: none;
-  	outline: none;
-  	cursor: pointer;
-}
-
-#divHeading {
-  	background: #f5f5f5;
-  	font-weight: 900;
-  	text-align: left;
-  	padding: 1.3%;
-  	vertical-align: middle;
-  	display: inline-block;
-  	width: 100%;
-  	box-sizing: border-box;
-
-}
-
- #regionheading {
-    font-weight: 900;
-    vertical-align: middle;
-    background-color: #f5f5f5;
-    float: left;
-    font-size: 30px;
-    color: #f5f5f5;
-
-    }
-.list {
-  text-align: left;
-  padding-left: 25%;
-  list-style:none;
-  font-weight:600;
-  margin: 2%;
-}
-.headings {
-  text-align: left;
-  padding-left:26%;
-  font-weight: 700;
-}
-
-#table {
-    color:#ffffff;
-    display:flex;
-    justify-content:center;
-    flex-wrap: wrap;
-    width:100%;
-    text-align: center;
-}
-
-#table > div {
-    width:25%;
-}
-
-@media(max-width:1024px){
-    #table > div {
-        width:33%;
-    }
-}
-
-@media(max-width:768px){
-    #table > div {
-        width:50%;
-    }
-}
-
-@media(max-width:500px){
-    #table > div {
-        width:100%;
-    }
-}
-#regionheading {
-  font-size: 35px;
-  color:#000000;
-  font-weight: 900;
-  font-family: Rubik;
-  font-weight: 700;
-}
-
-
-@media only screen and (max-width: 1024px) {
-	#regionheading {
-		font-size:25px;
-	}
-}
-
-
-
-
-
-</style>
 
 
   <div id="EarthTab" class="tabcontent">
@@ -143,35 +45,32 @@
 
   <div id="table">
    <div class="newHeadings">
-      <h2 class="headings">AFRICA</h2>
+      <h3 class="headings">AFRICA</h3>
       <ul class="list">
               <li><div class="box earthLOP"></div>Ivoria (LoP)</li>
               <li><div class="box earthPGF"></div>Pino Grand Fenwick</li>
               <li><div class="box earthBRITTANIA"></div>Brittania</li>
               <li><div class="box earthASH"></div>Madagascar (Ash)</li>
-              <li><div class="box earthYEAM"></div>Yeamilaki Menigisiti</li>
       </ul>
    </div>
    <div class="newHeadings">
-      <h2 class="headings">ASIA</h2>
+      <h3 class="headings">ASIA</h3>
       <ul class="list">
               <li><div class="box earthASH"></div>Ash</li>
               <li><div class="box earthREPUBLICA"></div>Republica</li>
               <li><div class="box earthRDA"></div>Northern Pacific Empire</li>
-              <li><div class="box earthALPAK"></div>Al-Pakistan</li>
-              <li><div class="box earthSARAWAK"></div>Sarawak Dominion</li>
 
       </ul>
    </div>
    <div class="newHeadings">
-      <h2 class="headings">OCEANIA</h2>
+      <h3 class="headings">OCEANIA</h3>
       <ul class="list">
               <li><div class="box earthSUBURBIA"></div>Suburbia-Purlieu</li>
               <li><div class="box earthBRITTANIA"></div>Brittania</li>
       </ul>
    </div>
    <div class="newHeadings">
-      <h2 class="headings">EUROPE</h2>
+      <h3 class="headings">EUROPE</h3>
       <ul class="list">
               <li><div class="box earthBRITTANIA"></div>Brittania</li>
               <li><div class="box earthTEUTIONIA"></div>Teutionia</li>
@@ -181,18 +80,18 @@
       </ul>
    </div>
    <div class="newHeadings">
-      <h2 class="headings">NORTH AMERICA</h2>
+      <h3 class="headings">NORTH AMERICA</h3>
       <ul class="list">
               <li><div class="box earthFCI"></div>Confederate Imperium</li>
               <li><div class="box earthCCCP"></div>CCCP</li>
-              <li><div class="box earthCANADA"></div>Cascadia</li>
+              <li><div class="box earthCASCADIA"></div>Cascadia</li>
               <li><div class="box earthSUBURBIA"></div>The Mexican Crown Dominion</li>
               <li><div class="box earthASH"></div>Ashian Baja</li>
               <li><div class="box earthRDA"></div>Northern Pacific Empire</li>
       </ul>
    </div>
    <div class="newHeadings">
-      <h2 class="headings">SOUTH AMERICA</h2>
+      <h3 class="headings">SOUTH AMERICA</h3>
       <ul class="list">
               <li><div class="box earthSUBURBIA"></div>The Manteño Crown Dominion</li>
               <li><div class="box earthCCCP"></div>CCCP</li>
@@ -201,7 +100,7 @@
    </div>
 </div>
 		<div class="spaceDate">
-        	<p class="footer">Updated 7th April 2020</p>
+        	<p class="footer">Updated 31st August 2020</p>
         	<p class="footer">Map and site made by  <img src="Flags/alexfavicon.png"> Alex</p>
           <p class="footer">Earth map maintained by <img src="Flags/alexfavicon.png"> Alex and <img src="Flags/ashfavicon.png"> Ash</p>
 		</div>
@@ -213,8 +112,8 @@
     <div id="space">
       <img id="spaceMap">
     </div>
-
-    <div id="spaceSwitchButtonDiv" style="text-align: center; padding-top:3%;padding-bottom:5%;padding-left:0;padding-right:0;">
+<br>
+    <div id="spaceSwitchButtonDiv" style="text-align: center; padding-top:3%;padding-bottom:5%;padding-left:3%;padding-right:3%;width:90%;">
       <a id="NationButton" style="font-size: 25px; font-weight: 800;" onclick="toggleBtnClickNation()" class="spaceSwitchButton">Borders</a><a id="RegionButton" style="font-size: 25px; font-weight: 800;" onclick="toggleBtnClickRegion()" class="spaceSwitchButton">Regions</a><a id="DetailButton" style="font-size: 25px; font-weight: 800;" onclick="toggleBtnClickDetail()" class="spaceSwitchButton">Detail</a>
     </div>
 
@@ -234,99 +133,62 @@
       }
       toggleBtnClickNation()
     </script>
-<style>
-.spaceSwitchButton.active {
-  background: #f5f5f5;
-  color: #000000;
-}
-.spaceSwitchButton:hover {
-  background: #f5f5f5;
-  color: #000000;
-}
-.spaceSwitchButton {
-  float: center;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 18px 20px;
-  transition: 0.1s;
-  font-size: 30px;
-  color: #f5f5f5;
-  vertical-align: bottom;
-  font-family: Rubik;
-  font-weight:500;
-
-  background-color: #000000;
-  text-align: middle;
-  -webkit-animation: fadeEffect 0.5s;
-  animation: fadeEffect 0.5s;
-}
-.spaceSwitchButton.active {
-  background-color: #ffffff;
-}
-.spaceSwitchButtonDiv {
-  margin-top:1em;
-  margin-bottom:1em;
-}
-.spaceSwitchButton {
-  padding: 15px 17px;
-}
-</style>
 
 
+<div id="table"style="color: #000000;">
+  <div class="newHeadings">
+     <h3 class="headings">NORTH</h3>
+     <ul class="list">
+      <li><div class="box spaceTEUTIONIA"></div>Teutionia</li>
+      <li><div class="box spaceREPUBLICA"></div>Republica</li>
+      <li><div class="box spaceASH"></div>Ash</li>
+      <li><div class="box spaceCCCP"></div>CCCP</li>
+      <li><div class="box spaceSUBURBIA"></div>Suburbia Purlieu</li>
+      <li><div class="box spaceDRACOAETERNUM"></div>Draco Aeternum</li>
+      <li><div class="box spaceSHRIVE"></div>Shrive</li>
+     </ul>
+  </div>
+  <div class="newHeadings">
+     <h3 class="headings">SOUTH</h3>
+     <ul class="list">
+      <li><div class="box spacePGF"></div>Pino Grand Fenwick</li>
+      <li><div class="box spaceSTEKARUS"></div>Stekarus</li>
+      <li><div class="box spaceTRIBES"></div>21 Tribes</li>
+      <li><div class="box spaceGRENZE"></div>Die Osterreichisch Grenze</li>
+      <li><div class="box spaceBRITTANIA"></div>Britannia</li>
+      <li><div class="box spaceZEIKEUTSYR"></div>Zeikeutsyr</li>
+      <li><div class="box spaceISAURIAN"></div>Isaurian League</li>
+      <li><div class="box spaceUKARIST"></div>Ukarist</li>
 
-  <div id="table" style="color: #000000;">
-    <div class="newHeadings">
-       <h2 class="headings">NORTH</h2>
-        <ul id="spaceList" class="list">
-                <li><div class="box spaceTEUTIONIA"></div>Teutionia</li>
-                <li><div class="box spaceREPUBLICA"></div>Republica</li>
-                <li><div class="box spaceASH"></div>Ash</li>
-                <li><div class="box spaceCCCP"></div>CCCP</li>
-                <li><div class="box spaceSUBURBIA"></div>Suburbia Purlieu</li>
-                <li><div class="box spaceDRACOAETERNUM"></div>Draco Aeternum</li>
-                <li><div class="box spaceSHRIVE"></div>Shrive</li>
-        </ul>
-     </div>
-     <div class="newHeadings">
-       <h2 class="headings">SOUTH</h2>
-        <ul id="spaceList" class="list">
-                <li><div class="box spacePGF"></div>Pino Grand Fenwick</li>
-                <li><div class="box spaceSTEKARUS"></div>Stekarus</li>
-                <li><div class="box spaceTRIBES"></div>21 Tribes</li>
-                <li><div class="box spaceGRENZE"></div>Die Osterreichisch Grenze</li>
-                <li><div class="box spaceBRITTANIA"></div>Britannia</li>
-                <li><div class="box spaceZEIKEUTSYR"></div>Zeikeutsyr</li>
-                <li><div class="box spaceISAURIAN"></div>Isaurian League</li>
-                <li><div class="box spaceUKARIST"></div>Ukarist</li>
-        </ul>
-     </div>
+     </ul>
+  </div>
+  <div class="newHeadings">
+     <h3 class="headings">EAST</h3>
+     <ul class="list">
+      <li><div class="box spaceCONFEDERATEIMPERIUM"></div>Confederate Imperium</li>
+      <li><div class="box spaceRDA"></div>Northern Pacific Empire</li>
+      <li><div class="box spaceSILBERFLUSS"></div>Silberfluss</li>
+      <li><div class="box spacePORTALLA"></div>Portalla</li>
+      <li><div class="box spaceAIDAN"></div>Vormundschaft Lagien</li>
+      <li><div class="box spaceSHEJIN"></div>Shejin</li>
+     </ul>
+  </div>
+  <div class="newHeadings">
+     <h3 class="headings">WEST</h3>
+     <ul class="list">
+      <li><div class="box spaceNEF"></div>New Equestrian Federation</li>
+      <li><div class="box spaceGRIPPLI"></div>Grippli Ympir</li>
+      <li><div class="box spaceMERIDIAN"></div>Union of Meridian</li>
+      <li><div class="box spaceTRAIKUPI"></div>Traikupi</li>
+      <li><div class="box spaceISTANISTAN"></div>Istanistan</li>
+      <li><div class="box spaceDERFLEKKTAGEN"></div>Derflekktagen</li>
+      <li><div class="box spaceUELVAN"></div>Uelvan</li>
+      <li><div class="box spaceTITANANIUM"></div>Titananium</li>
+     </ul>
+  </div>
+</div>
 
-     <div class="newHeadings">
-       <h2 class="headings">EAST</h2>
-        <ul id="spaceList" class="list">
-                <li><div class="box spaceCONFEDERATEIMPERIUM"></div>Confederate Imperium</li>
-                <li><div class="box spaceRDA"></div>Northern Pacific Empire</li>
-                <li><div class="box spaceSILBERFLUSS"></div>Silberfluss</li>
-                <li><div class="box spacePORTALLA"></div>Portalla</li>
-                <li><div class="box spaceAIDAN"></div>Vormundschaft Lagien</li>
-                <li><div class="box spaceSHEJIN"></div>Shejin</li>
-                <li><div class="box spaceMORGUR"></div>Uruk Empire of Morgur</li>
-        </ul>
-     </div>
-     <div class="newHeadings">
-       <h2 class="headings">WEST</h2>
-        <ul id="spaceList" class="list">
-                <li><div class="box spaceNEF"></div>New Equestrian Federation</li>
-                <li><div class="box spaceGRIPPLI"></div>Grippli Ympir</li>
-                <li><div class="box spaceMERIDIAN"></div>Union of Meridian</li>
-                <li><div class="box spaceTRAIKUPI"></div>Traikupi</li>
-                <li><div class="box spaceISTANISTAN"></div>Istanistan</li>
-                <li><div class="box spaceDERFLEKKTAGEN"></div>Derflekktagen</li>
-                <li><div class="box spaceUELVAN"></div>Uelvan</li>
-                <li><div class="box spaceTITANANIUM"></div>Titananium</li>
-        </ul>
-     </div>
+ 
 
 	<div class="spaceDate" style="width:100%">
     <p class="footer">Updated 7th April 2020</p>
@@ -337,293 +199,18 @@
 </div>
 
 <div id="InfoTab" class="tabcontent">
-
-<div class="row">
-  <div id="leftColumn" class="column" style="width: 20%; ">
+ 
+  <div id="claimForm">
+    <h4 style="padding-left: 12px;">Make a map request here. If you are a new nation, be sure to fill out all sections.</h4>
+    <br>
+    <div class="container" id="ff-compose"></div>
+    <script async defer src="https://formfacade.com/include/114918166481213981577/form/1FAIpQLSfc3VMHZN8Zlm7w89C2BxBNWEPYes1AiE9aEf3OEnMSFN1HJA/bootstrap.js?div=ff-compose"></script>
+    <div style="padding-left: 14px;"><a role="button" class="btn btn-outline-primary" href="https://docs.google.com/spreadsheets/d/1gfwoSR3S5tKJSj1ab-4edHINU6O9mPUEwRAMvgyJHJU/">Check the status of your request</a></div>
   </div>
-  <div id="centreColumn" class="column" style="width: 60%;">
-    <div id="topElements" align="center">
-    <div id="mainHeading"><h1>Request territory on the map</h1></div>
-    <div id="text">Make a map request here. If you are a new nation, be sure to fill out all sections.</div>
-    <div id="secondaryHeading"><h2><a href="https://docs.google.com/spreadsheets/d/1gfwoSR3S5tKJSj1ab-4edHINU6O9mPUEwRAMvgyJHJU/edit?usp=sharing" target="_blank">Check the status of your request</a></h2></div>
-
-  </div>
-    <div id="claimForm" align="center" >
-    	<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfc3VMHZN8Zlm7w89C2BxBNWEPYes1AiE9aEf3OEnMSFN1HJA/viewform?bc=transparent&embedded=true" width="700" height="1100" frameborder="0" marginheight="0" marginwidth="0" align="center">Loading...</iframe>
-    </div>
-  </div>
-
-  <div id="rightColumn" class="column" style="width: 20%;">
-    <h2></h2>
-  </div>
+  
+  
 </div>
 
-</div>
-
-</div>
-
-
- <style>
- .column {
-    float: left;
-    padding: 10px;
-    height: 100%; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-#textInfo {
-    font-family: Georgia,Cambria,"Times New Roman",Times,serif;
-    letter-spacing: .01rem;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 19px;
-    line-height: 1.58;
-    letter-spacing: -.003em;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-}
-
-#mainInfoHeading {
-    font-family: Merriweather;
-    font-style: italic;
-    font-weight: 900;
-    font-size: 45px;
-    padding-top: 75px;
-}
-#secondaryInfoHeading {
-    font-family: Merriweather;
-    font-weight: 700;
-    font-size: 25px;
-    padding-bottom: 35px;
-    padding-top: 13px;
-}
-.titlesInfo {
-    font-family: Merriweather;
-    font-style: italic;
-    font-weight: 900;
-    font-size: 35px;
-    padding-top: 40px;
-    padding-bottom: 35px;
-}
-
-  #claim {
-    color: #000000;
-    text-align: center;
-  }
-  .legendcontent {
-    list-style:none; font-size: 19px; font-weight: 700; align: top;
-  }
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Karla', sans-serif;
-    }
-    #preloadedImages
-    {
-        width: 0px;
-        height: 0px;
-        display: inline;
-        background-image: url(SpaceMap/Space_Map.png);
-        background-image: url(SpaceMap/Earth_Map.png);
-        background-image: url(SpaceMap/Region_Map.png);
-        background-image: url(SpaceMap/Space_Map_Text.png);
-
-    }
-
-
-    .spaceDate {
-      margin-top:1cm;
-      background: #282828;
-      color:#ffffff;
-      font-weight: 900;
-      text-align: left;
-      padding-top: 0.8%;
-      padding-bottom: 0.8%;
-      vertical-align: middle;
-      display: inline-block;
-      width: 100%;
-
-
-    }
-
-    .footer {
-    	padding-left: 1cm;
-    }
-
-    #SpaceTab {
-      background: #fdc72e;
-    }
-
-    #space {
-      background: #fdc72e;
-      text-align: center;
-      padding-top: 1cm;
-      image-rendering: smooth;
-
-    }
-
-
-    #spaceLabels {
-      background: #fdc72e;
-      color: #f5f5f5;
-      text-align: center;
-      padding-top: 1cm;
-
-    }
-    ul {
-      margin: 1em 0;
-      padding: 0 0 0 10px;
-    }
-    li {
-      margin: 0.5em 0;
-    }
-
-
-    #AfricaButton:hover {
-      background: #f5f5f5;
-      color: #000000;
-    }
-
-
-        .placeholder {
-    	background: #000000;
-    }
-    .box {
-    float: left;
-    width: 18px;
-    height: 18px;
-    margin: 0px;
-    margin-right: 15px;
-    vertical-align: text-bottom;
-    }
-
-    #spaceButton {
-      background-color: #f5f5f5;
-      color: #000000;
-    }
-
-    #earthButton {
-      background-color: #f5f5f5;
-      color: #000000;
-    }
-    #info {
-      background-color: #f5f5f5;
-      color: #000000;
-    }
-
-
-
-    #defaultOpen:hover {
-      background-color: #014197;
-    }
-
-    #spaceButton:hover {
-      background-color: #ffd45b;
-    }
-    #earthButton:hover {
-      background-color: #0053c2;
-      color: #ffffff;
-    }
-    #defaultOpen.active {
-      background-color: #014197;
-    }
-    #spaceButton.active {
-      background-color: #fdc72e;
-    }
-    #earthButton.active {
-      background-color: #014197;
-      color:#ffffff;
-    }
-    #info.active {
-      background-color: #e0e0e0;
-      color: #000000;
-    }
-    #info:hover {
-      background-color: #e0e0e0;
-      color: #000000;
-    }
-
-    .tabcontent {
-      display: none;
-      border-top: none;
-      -webkit-animation: fadeEffect 0.5s;
-      animation: fadeEffect 0.5s;
-    }
-    .SMButton {
-      -webkit-animation: fadeEffect 0.5s;
-      animation: fadeEffect 0.5s;
-      vertical-align: middle;
-    }
-
-    @-webkit-keyframes fadeEffect {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-    @keyframes fadeEffect {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-
-    #spaceMap {
-    	width: 60%;
-    }
-@media only screen and (max-width:600px) {
-
-	#regionheading {
-		display:none;
-	}
-	#info {
-		width:20%;
-		margin:0;
-	}
-	#earthButton {
-		width:40%;
-		margin:0;
-		float:left;
-	}
-	#spaceButton {
-		width:40%;
-		margin:0;
-	}
-	#divHeading {
-		margin:0;
-		padding:0;
-
-	}
-	.list {
-		padding-left:5%;
-	}
-	.headings {
-		padding-left:5%;
-	}
-	#spaceList {
-		padding-left:5em;
-	}
-
-
-	#spaceMap {
-		width: 95%;
-	}
-	#leftColumn {
-	  display:none;
-	}
-	#centreInfoColumn {
-	  padding-left: 0;
-	  padding-right: 0;
-	}
-	#rightColumn {
-	  display:none;
-	}
-	.iframe {
-		width:100vw;
-	}
-}
-    </style>
   <script>
     function openMap(evt, mapName) {
       var i, tabcontent, tablinks;
@@ -647,4 +234,7 @@
      document.body.style.background = color;
   }
   </script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   </body>
