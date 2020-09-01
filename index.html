@@ -2,7 +2,7 @@
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <title>Regional Maps</title>
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106544095-1"></script>
@@ -32,7 +32,7 @@ body {
       <button style="font-weight: 700;" id="spaceButton"  class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'SpaceTab');document.body.style.backgroundColor = '#fdc72e';">Space</button>
       <button style="font-weight: 700;" id="earthButton"  class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'EarthTab');document.body.style.backgroundColor = '#014197';">Earth</button>
       <button style="font-weight: 700;" id="infoButton"   class="tablinks tab buttons buttonBehaviour" onclick="openMap(event, 'InfoTab');document.body.style.backgroundColor = '#f5f5f5';" >+</button>
-      <div id="title"><a id="regionheading" style="font-weight: 700;" class="buttons buttonBehaviour" >THE UNIVERSAL ORDER OF NATIONS</a></div>
+      <div id="title"><a id="regionheading" style="font-weight: 700;" class="buttons buttonBehaviour" href="https://nationstates.net/region=the_universal_order_of_nations">THE UNIVERSAL ORDER OF NATIONS</a></div>
   </div>
 
 
@@ -47,17 +47,17 @@ body {
    <div class="newHeadings">
       <h3 class="headings">AFRICA</h3>
       <ul class="list">
-              <li><div class="box earthLOP"></div>Ivoria (LoP)</li>
+              <li><div class="box earthLOP"></div>Ivoria <small>(LoP)</small></li>
               <li><div class="box earthPGF"></div>Pino Grand Fenwick</li>
               <li><div class="box earthBRITTANIA"></div>Brittania</li>
-              <li><div class="box earthASH"></div>Madagascar (Ash)</li>
+              <li><div class="box earthASH"></div>Madagascar <small>(Ash)</small></li>
       </ul>
    </div>
    <div class="newHeadings">
       <h3 class="headings">ASIA</h3>
       <ul class="list">
               <li><div class="box earthASH"></div>Ash</li>
-              <li><div class="box earthTARTARIA"></div>Tartaria (Ashian Vassal)</li>
+              <li><div class="box earthTARTARIA"></div>Tartaria <small>(Ashian Vassal)</small></li>
               <li><div class="box earthREPUBLICA"></div>Republica</li>
               <li><div class="box earthRDA"></div>Northern Pacific Empire</li>
               <li><div class="box earthPERM"></div>Perm</li>
@@ -78,8 +78,8 @@ body {
               <li><div class="box earthTEUTIONIA"></div>Teutionia</li>
               <li><div class="box earthPGF"></div>Pino Grand Fenwick</li>
               <li><div class="box earthSTEK"></div>Stekarus</li>
-              <li><div class="box earthGODMAKER"></div>Kingdom of Godmaker (Teutionic Puppet)</li>
-              <li><div class="box earthMOSCOW"></div>Republic of Moscow (Teutionic Puppet)</li>
+              <li><div class="box earthGODMAKER"></div>Kingdom of Godmaker <small>(Teutionic Puppet)</small></li>
+              <li><div class="box earthMOSCOW"></div>Republic of Moscow <small>(Teutionic Puppet)</small></li>
               <li><div class="box earthPETRO"></div>Republic of Petrograd</li>
               <li><div class="box earthTGKC"></div>Transitionary Governance of the Kingdom of Catalonia</li>
       </ul>
@@ -118,9 +118,11 @@ body {
       <img id="spaceMap">
     </div>
 <br>
-    <div id="spaceSwitchButtonDiv" style="text-align: center; padding-top:3%;padding-bottom:5%;padding-left:3%;padding-right:3%;width:90%;">
+<div id="spaceSwitchButtonContainer">
+    <div id="spaceSwitchButtonDiv">
       <a id="NationButton" style="font-size: 25px; font-weight: 800;" onclick="toggleBtnClickNation()" class="spaceSwitchButton">Borders</a><a id="RegionButton" style="font-size: 25px; font-weight: 800;" onclick="toggleBtnClickRegion()" class="spaceSwitchButton">Regions</a><a id="DetailButton" style="font-size: 25px; font-weight: 800;" onclick="toggleBtnClickDetail()" class="spaceSwitchButton">Detail</a>
     </div>
+  </div>
 
     <script>
       document.getElementById("spaceMap").src = "SpaceMap/Space_Map.png";
