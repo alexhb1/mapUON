@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>Space Map</title>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106544095-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)};
+    gtag('js', new Date());
+
+    gtag('config', 'UA-106544095-1');
+
+</script>
+
+    <link rel="prefetch" as="image" href="SpaceMap/Region_Map.png">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:500,700" rel="stylesheet">
+    <link rel="stylesheet" href="mapColor.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+
+
+  <body>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Karla', sans-serif;
+        background-color: #fdc72e;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #f5f5f5;
+      padding:30px;
+    }
+    
+    .topnav a {
+      float: right;
+      display: block;
+      color: #000000;
+      text-align: center;
+      padding: 16px 18px;
+      font-size: 30px;
+      outline: none;
+      font-family:Rubik;
+      text-decoration: none;
+      cursor: default;
+
+    }
+    
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+      
+    }
+    
+    .topnav .icon {
+      display: none;
+    }
+    
+    #buttonElysium.active {
+      background-color: #446ba3;
+      color: #ffffff;
+    }
+    
+    #buttonSpace.active {
+      background-color: #fdc72e;
+      color: #000000;
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child) {display: none;}
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+      .topnav {
+        padding:0;
+      }
+      .topnav a {
+        float:left;
+      }
+      #regionheading {
+        display:none;
+      }
+    }
+    
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {position: relative;}
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+      .topnav {
+        padding:0;
+      }
+      .topnav a {
+        float:left;
+      }
+      #regionheading {
+        display:none;
+      }
+    }
+    </style>
+    </head>
+    <body>
+    
+    <div class="topnav" id="myTopnav">
+      <a id="buttonElysium" href="index.html">Elysium</a>
+      <a id="buttonSpace" href="#" class="active">Space</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdSnweIpUVPqgtKoRkHeJlYZ1oL1TrbUYhOkxAaGK2T62sqng/viewform?usp=sf_link" target="_blank">Map Request</a>
+      <a id="regionheading" href="https://nationstates.net/region=the_universal_order_of_nations">THE UNIVERSAL ORDER OF NATIONS</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    
+
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+
+
+
+    <div id="SpaceTab">
+        <div id="space">
+          <img id="spaceMap">
+        </div>
+    <br>
+    <div id="spaceSwitchButtonContainer">
+        <div id="spaceSwitchButtonDiv">
+          <a id="NationButton" style="font-size: 25px; font-weight: 800;" onclick="toggleBtnClickNation()" class="spaceSwitchButton">Borders</a><a id="RegionButton" style="font-size: 25px; font-weight: 800;" onclick="toggleBtnClickRegion()" class="spaceSwitchButton">Regions</a><a id="DetailButton" style="font-size: 25px; font-weight: 800;" onclick="toggleBtnClickDetail()" class="spaceSwitchButton">Detail</a>
+        </div>
+      </div>
+    
+        <script>
+          document.getElementById("spaceMap").src = "SpaceMap/Space_Map.png";
+    
+          function toggleBtnClickNation() {
+            document.getElementById("spaceMap").src = "SpaceMap/Space_Map.png";
+          }
+    
+          function toggleBtnClickRegion() {
+            document.getElementById("spaceMap").src = "SpaceMap/Region_Map.png";
+          }
+    
+          function toggleBtnClickDetail() {
+            document.getElementById("spaceMap").src = "SpaceMap/Space_Map_Text.png";
+          }
+          toggleBtnClickNation()
+        </script>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
